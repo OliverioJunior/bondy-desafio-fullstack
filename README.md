@@ -20,6 +20,7 @@ package.json
 ```
 Para executar os scripts presentes nos arquivos package.json:
 
+- Adicionar o comando ` "start:windows": "SET NODE_ENV=local & serverless offline --stage local"` no backend
 - `yarn lerna run` + comando (ex: `yarn lerna run test:coverage`)
 - Em um projeto específico `yarn lerna run start --scope=backend`, o scope é o name que está no package.json
 - Também é possível executar os comandos normalmente entrando na pasta especifica do projeto.
