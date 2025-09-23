@@ -1,0 +1,14 @@
+:root {
+  /* Cores principais da marca */
+  --primary-dark: #030c2e; /* Azul profundo - fundo principal, texto e ícones */
+  --primary-bright: #5656e6; /* Azul vibrante - botões de destaque, links e detalhes visuais */
+
+  /* Cores neutras e de apoio */
+  --bg-light: #f2f2f2; /* Cinza suave - fundo de seções e cards */
+  --text-secondary: #333333; /* Cinza escuro - textos e elementos secundários */
+  --surface-white: #ffffff; /* Branco puro - texto em áreas escuras e botões */
+
+  /* Cores de feedback e ação */
+  --success-green: #38bf6d; /* Verde sucesso - botão "Sim" e confirmações */
+  --danger-red: #e03131; /* Vermelho alerta - botão "Não" e cancelamentos */
+}
