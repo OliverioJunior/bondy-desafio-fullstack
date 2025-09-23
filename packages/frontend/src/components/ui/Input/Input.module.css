@@ -1,0 +1,136 @@
+@import '../../../styles/variables.css';
+
+.container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  width: 100%;
+  position: relative;
+}
+
+.size-small {
+  font-size: 0.875rem;
+}
+
+.size-medium {
+  font-size: 1rem;
+}
+
+.size-large {
+  font-size: 1.125rem;
+}
+
+.label {
+  font-weight: 500;
+  color: var(--text-secondary);
+  font-size: 0.875rem;
+  margin-bottom: 0.25rem;
+  transition: color 0.2s ease;
+}
+
+.required {
+  color: var(--danger-red);
+  margin-left: 0.25rem;
+  font-weight: 600;
+}
+
+.inputWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.input {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-size: inherit;
+  font-family: inherit;
+  background-color: var(--surface-white);
+  color: var(--primary-dark);
+  transition: all 0.2s ease;
+  outline: none;
+    box-shadow: 0 0 0 3px rgba(86, 86, 230, 0.1);
+}
+
+.input:hover:not(:disabled) {
+  border-color: var(--primary-bright);
+  box-shadow: 0 0 0 1px var(--primary-bright);
+}
+
+.input:disabled {
+  background-color: var(--surface-light);
+  color: var(--text-secondary);
+  cursor: not-allowed;
+  opacity: 0.6;
+}
+
+.focused .label {
+  color: var(--primary-bright);
+}
+
+.error .input {
+  border-color: var(--danger-red);
+  box-shadow: 0 0 0 1px var(--danger-red);
+}
+
+.error .label {
+  color: var(--danger-red);
+}
+
+.variant-filled .input {
+  background-color: var(--surface-light);
+  border: 2px solid transparent;
+}
+
+.variant-outlined .input {
+  background-color: transparent;
+  border: 2px solid var(--surface-light);
+}
+
+.errorMessage {
+  color: var(--danger-red);
+  font-size: 0.75rem;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.helperText {
+  color: var(--text-secondary);
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+@media (max-width: 768px) {
+  .input {
+    padding: 0.625rem 0.875rem;
+    font-size: 16px;
+  }
+  
+  .size-small .input {
+    padding: 0.5rem 0.75rem;
+  }
+  
+  .size-large .input {
+    padding: 0.875rem 1.125rem;
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .input,
+  .label {
+    transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+}
+
+@media (prefers-contrast: high) {
+  .input {
+    border-width: 3px;
+  }
+  
+  .input:focus {
+    box-shadow: 0 0 0 4px var(--primary-bright);
+  }
+}
