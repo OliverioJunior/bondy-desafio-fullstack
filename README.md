@@ -1,49 +1,41 @@
-# bondy-desafio-fullstack
+# Bondy Desafio Fullstack
 
-## Estrutura do repositório:
-Este projeto é um monorepo construído com Lerna (para saber mais => https://lerna.js.org/)
+## 📋 Sobre o Projeto
 
-- `backend` (API Graphql para realizar desafio de backend)
-- `frontend` (Repo para criação do frontend do desafio)
+Este é um projeto fullstack desenvolvido como desafio técnico, implementando um sistema de autenticação completo com GraphQL, React e MongoDB. O projeto utiliza uma arquitetura de monorepo gerenciada pelo Lerna.
 
+# README - Instruções para Configuração do Projeto
+
+## Pré-requisitos
+- Node.js instalado (versão 18.x ou superior)
+- Yarn (npm/yarn) instalado
+- MongoDB configurado (se aplicável)
+
+## Como Configurar
+
+1. Clone o repositório:
+```bash
+git clone https://github.com/seu-usuario/bondy-desafio-fullstack.git
 ```
-packages/
-    backend/
-        src/
-            ...
-        package.json
-        serverless.yml
-    frontend/
-        package.json
 
-package.json
+2. Instale as dependências:
+```bash
+yarn install
 ```
-Para executar os scripts presentes nos arquivos package.json:
 
-- Adicionar o comando ` "start:windows": "SET NODE_ENV=local & serverless offline --stage local"` no backend
-- `yarn lerna run` + comando (ex: `yarn lerna run test:coverage`)
-- Em um projeto específico `yarn lerna run start --scope=backend`, o scope é o name que está no package.json
-- Também é possível executar os comandos normalmente entrando na pasta especifica do projeto.
+4. Inicie o servidor de desenvolvimento:
+```bash
+yarn run start
+```
 
-## O que deve ser feito
-
-### Backend:
-Utilizar a estrutura existente para criar uma mutation para realização de um login, a mesma deve receber email e senha e fazer verificação no banco se as informações estão corretas:
-- O projeto está configurado com Node 18, dar yarn na raiz para baixar dependências.
-- O projeto já está configurado apontado para o banco MongoDB de testes;
-- As configurações do banco estão no arquivo src/memoryDB/connection.ts
-- Já existe um usuário cadastrado com o email desafio@bondy.com.br e senha 123456, que está salva encriptado utilizando a lib bcrypt;
-- Essa mutation de login deve retornar todas as informações salvas na model User;
-- Ao rodar o projeto com `yarn start` será apresentado no console a url para o Playground para testes de graphql;
-- O projeto deve ter uma autenticação usando JWT;
-
-### Frontend:
-Criar um projeto frontend dentro da pasta packages/frontend:
-- O projeto deve se conectar com o backend e realizar as consultas via graphql;
-- Deve conter uma pagina de login, com campo de e-mail e senha;
-- Ao passar os dados corretamente o usuário deve ser direciona a uma pagina de boas-vindas;
-
-### Orientações gerais
-- Não aceitaremos prs nesse projeto, você precisa criar um fork desse projeto e mandar o link do projeto publicado no seu github.
-
-
+## Comandos Lerna Específicos
+- `npx lerna run start --parallel` - Inicia todos os serviços em paralelo
+## Estrutura do Projeto
+```
+bondy-desafio-fullstack/
+├── packages/
+│   ├── backend/     # API GraphQL com Serverless
+│   └── frontend/    # Aplicação React
+├── lerna.json       # Configuração do Lerna
+└── package.json     # Scripts do monorepo
+```
