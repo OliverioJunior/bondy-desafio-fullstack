@@ -8,8 +8,8 @@ Este é um projeto fullstack desenvolvido como desafio técnico, implementando u
 
 ## Pré-requisitos
 - Node.js instalado (versão 18.x)
-- Yarn (npm/yarn) instalado
-- MongoDB configurado (se aplicável)
+- Yarn instalado
+- MongoDB configurado
 
 ## Como Configurar
 
