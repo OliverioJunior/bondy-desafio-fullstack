@@ -1,0 +1,117 @@
+@import '../../styles/variables.css';
+
+.container {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(
+    135deg,
+    var(--primary-bright) 0%,
+    var(--primary-dark) 100%
+  );
+  padding: 1rem;
+}
+
+.loginCard {
+  background: var(--surface-white);
+  border-radius: 16px;
+  box-shadow:
+    0 20px 25px -5px rgba(0, 0, 0, 0.1),
+    0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  padding: 2rem;
+  width: 100%;
+  max-width: 400px;
+  animation: slideUp 0.5s ease-out;
+}
+
+@keyframes slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.header {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--primary-dark);
+  margin-bottom: 0.5rem;
+}
+
+.subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.formContainer {
+  margin-bottom: 1.5rem;
+}
+
+.form {
+  margin: 0;
+}
+
+.errorMessage {
+  background-color: rgba(239, 68, 68, 0.1);
+  border: 1px solid var(--danger-red);
+  border-radius: 8px;
+  padding: 0.75rem;
+  margin-top: 1rem;
+  color: var(--danger-red);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.footer {
+  border-top: 1px solid var(--surface-light);
+  padding-top: 1.5rem;
+  text-align: center;
+}
+
+.credentials {
+  font-size: 0.875rem;
+  color: var(--text-secondary);
+  line-height: 1.6;
+  background-color: var(--surface-light);
+  padding: 1rem;
+  border-radius: 8px;
+  border-left: 4px solid var(--primary-bright);
+}
+
+@media (max-width: 768px) {
+  .container {
+    padding: 0.5rem;
+  }
+
+  .loginCard {
+    padding: 1.5rem;
+    border-radius: 12px;
+  }
+
+  .title {
+    font-size: 1.75rem;
+  }
+
+  .credentials {
+    font-size: 0.8rem;
+    padding: 0.875rem;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .loginCard {
+    animation: none;
+  }
+}
